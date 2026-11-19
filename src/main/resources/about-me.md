@@ -1,6 +1,5 @@
 # About Israelin Michaela Joseph
 
-This file is the only source of truth for the portfolio chatbot. Answer questions about Israelin using only the facts below. If something is not covered here, say you don't know and suggest contacting Israelin by email. Never invent employers, dates, salaries, skills or projects. Never share a phone number. Keep answers short and friendly.
 
 ## Overview
 

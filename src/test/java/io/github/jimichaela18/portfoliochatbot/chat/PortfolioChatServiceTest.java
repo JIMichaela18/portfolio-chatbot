@@ -77,7 +77,10 @@ class PortfolioChatServiceTest {
         SystemMessage systemMessage = assertInstanceOf(SystemMessage.class, messages[0]);
         UserMessage userMessage = assertInstanceOf(UserMessage.class, messages[1]);
         assertTrue(systemMessage.text().contains(
-                "If the reference does not contain the answer, say that the information is not available."
+                "If the reference does not contain the answer, say that the information is not available"
+        ));
+        assertTrue(systemMessage.text().contains(
+                "and suggest contacting Israelin by email."
         ));
         assertEquals(question, userMessage.singleText());
     }
