@@ -11,6 +11,9 @@ import org.springframework.http.MediaType;
 import org.springframework.stereotype.Component;
 import org.springframework.web.filter.OncePerRequestFilter;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import java.io.BufferedReader;
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
@@ -19,6 +22,8 @@ import java.nio.charset.StandardCharsets;
 
 @Component
 public class AskRequestBodySizeFilter extends OncePerRequestFilter {
+
+    private static final Logger log = LoggerFactory.getLogger(AskRequestBodySizeFilter.class);
 
     public static final int MAX_REQUEST_BODY_BYTES = 16 * 1024;
 
@@ -35,20 +40,21 @@ public class AskRequestBodySizeFilter extends OncePerRequestFilter {
 
         long contentLength = request.getContentLengthLong();
         if (contentLength > MAX_REQUEST_BODY_BYTES) {
-            writePayloadTooLarge(response);
+            writePayloadTooLarge(response, contentLength);
             return;
         }
 
         byte[] body = request.getInputStream().readNBytes(MAX_REQUEST_BODY_BYTES + 1);
         if (body.length > MAX_REQUEST_BODY_BYTES) {
-            writePayloadTooLarge(response);
+            writePayloadTooLarge(response, body.length);
             return;
         }
 
         filterChain.doFilter(new BufferedRequestWrapper(request, body), response);
     }
 
-    private void writePayloadTooLarge(HttpServletResponse response) throws IOException {
+    private void writePayloadTooLarge(HttpServletResponse response, long actualLength) throws IOException {
+        log.warn("/ask request rejected: actualLength={}, limitBytes={}", actualLength, MAX_REQUEST_BODY_BYTES);
         response.setStatus(413);
         response.setContentType(MediaType.APPLICATION_JSON_VALUE);
         response.getWriter().write(

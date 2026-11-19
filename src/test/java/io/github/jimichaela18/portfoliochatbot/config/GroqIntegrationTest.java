@@ -23,7 +23,5 @@ public class GroqIntegrationTest {
 
         assertNotNull(response);
         assertFalse(response.isBlank());
-
-        System.out.println("LLM Response: " + response);
     }
 }

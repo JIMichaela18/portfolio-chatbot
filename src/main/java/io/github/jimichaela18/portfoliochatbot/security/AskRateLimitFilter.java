@@ -11,6 +11,9 @@ import org.springframework.http.MediaType;
 import org.springframework.stereotype.Component;
 import org.springframework.web.filter.OncePerRequestFilter;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import java.io.IOException;
 import java.time.Clock;
 import java.time.Duration;
@@ -19,6 +22,8 @@ import java.util.concurrent.ConcurrentHashMap;
 
 @Component
 public class AskRateLimitFilter extends OncePerRequestFilter {
+
+    private static final Logger log = LoggerFactory.getLogger(AskRateLimitFilter.class);
 
     private final int requestLimit;
     private final long windowMillis;
@@ -70,6 +75,7 @@ public class AskRateLimitFilter extends OncePerRequestFilter {
                     response.setHeader("Retry-After", String.valueOf(retryAfterSeconds));
                     response.setContentType(MediaType.APPLICATION_JSON_VALUE);
                     response.getWriter().write("{\"error\":\"Too many requests\"}");
+                    log.warn("/ask rate limit reached: retryAfterSeconds={}, requestLimit={}", retryAfterSeconds, requestLimit);
                     window.lastSeenAt = now;
                     return;
                 }

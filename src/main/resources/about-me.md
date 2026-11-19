@@ -5,6 +5,12 @@
 
 Israelin Michaela Joseph is a Java and Spring Boot backend engineer with 4.5 years of experience. She develops and enhances backend services, collaborates with cross-functional teams and stakeholders to analyze requirements and deliver business solutions, and is also a maker who draws, paints, cooks, bakes and gardens. She enjoys experimenting with new things.
 
+## Professional Summary
+
+Software Engineer with 4.5 years of experience specializing in Java, Spring Boot, and backend/full-stack development, with experience building and maintaining enterprise applications, RESTful APIs, and web services with exposure to monolithic and service-oriented architecture.
+Strong in understanding business requirements and domain logic, collaborating with cross-functional teams, and translating requirements into technical solutions and new functionality. Experienced in analyzing existing systems, understanding business workflows, and contributing to solution design and application enhancements.
+Passionate about solving technical challenges, continuous learning, and building reliable software that aligns with business needs.
+
 ## Job search status
 
 Israelin is looking for a full-time Java and Spring Boot backend or full-stack role, including AI-focused teams.
@@ -22,23 +28,30 @@ Salary expectations are not listed here. For those, contact her by email.
 - GitHub: https://github.com/JIMichaela18
 - Resume: available as a download on the portfolio website.
 
-## Technical skills
+## Technical skills with work experience
 
 - Languages: Java 11, SQL, JavaScript, HTML, CSS
-- Frameworks and technologies: Spring Boot, Spring MVC, Spring Data JPA, Hibernate, Spring Batch, Spring Tiles, Java EE, Jakarta EE, Struts2, DWR, EHCache, Bootstrap, jQuery
+- Frameworks and technologies: Spring Boot, Spring MVC, Spring Security, Spring Data JPA, Hibernate, Spring Batch, Spring Tiles, Java EE, Jakarta EE, Struts2, DWR, EHCache, Bootstrap, jQuery
 - Databases: MySQL, PostgreSQL, IBM DB2
 - Cloud and DevOps: AWS (S3, SES), Docker, Azure Repos, Azure DevOps
 - APIs and security: RESTful APIs, OAuth 2.0, JJWT
-- Testing: JUnit, Mockito, Postman
+- Testing: JUnit, Mockito, Postman, HCLAppScan, Burpsuite, SonarQube
 - Reporting and visualization: Jaspersoft Studio, Apache ECharts
 - Version control: Git, TortoiseSVN
 - Methodologies and management: Agile, Waterfall, Jira
+- Architecture and design: Monolithic, Service-Oriented Architecture (SOA), Design Patterns
+
+## Technical skills without work experience, learning through hands-on projects
+- Languages: Java 21 - 27
+- Architecture: Event-Driven Architecture, Microservices
+- Distributed systems: Kafka, RAG-based chatbot with LangChain4j
 
 ## Work experience
 
 ### Career break: relocation (May 2023 to present)
 
-Israelin has been on a career break since May 2023 because of a relocation. During this time she has been upskilling: diving deep into modern Java internals, event-driven architecture, microservices and Kafka. She is also building and integrating AI chatbots, including the one on her portfolio, using LangChain4j and MCP (Model Context Protocol).
+- Israelin has been on a career break since May 2023 because of a relocation. Relocated and currently upskilling in AI and modern backend technologies, with a focus on Java internals, distributed systems, event-driven architecture, microservices, and Kafka.
+- Learning through hands-on projects, including a RAG-based chatbot built with LangChain4j and a Java MCP server that enables AI clients to access my GitHub projects and provides a secure way to contact me.
 
 ### Software Engineer, Capestart (March 2022 to April 2023)
 
@@ -65,7 +78,16 @@ Project 1 (June 2019 to April 2020):
 
 ## Education
 
-Master of Computer Applications (MCA), Mepco Schlenk Engineering College, 2017 to 2019.
+### Post Graduate
+- Master of Computer Applications (MCA), Mepco Schlenk Engineering College, 2017 to 2019.
+- 8.75 CGPA
+
+### Under Graduate
+- Bachelor of Computer Applications (BCA), Fatima College, 2014 to 2017.
+- 7.9 CGPA
+
+### Schooling
+Kanchi Sri Sankara Matriculation Higher Secondary School.
 
 ## Award
 
@@ -81,6 +103,7 @@ English and Tamil.
 
 ## GitHub projects
 
+- portfolio-chatbot: A Spring Boot and LangChain4j chatbot that answers questions about me from a knowledge file (RAG), built to provide AI-powered portfolio assistant on this portfolio.
 - digi-content: a production-style digital billing and subscription platform built with Java 27 and Spring Boot, exploring microservices, event-driven architecture, resilience and distributed systems. Uses Kafka. This project is in progress.
 - spring-boot-jpa-relationship-mappings: a Spring Boot and Spring Data JPA project demonstrating relational mapping annotations (one-to-one, one-to-many, many-to-one, many-to-many) through a RESTful API.
 - jsp-servlet-crud-employee-details: a legacy Java web application with complete CRUD for employee records, using JSP, Servlets, JDBC and MySQL.
@@ -89,11 +112,9 @@ Repositories: https://github.com/JIMichaela18
 
 Work projects from employers are not public and are described only at a high level.
 
-## In-progress AI projects
+## AI projects
 
-- Portfolio chatbot (this project): a Spring Boot and LangChain4j app that answers questions about Israelin using this file (RAG).
-- A custom MCP server in Java that exposes tools to AI clients.
-- An AI agent that uses MCP tools.
+- Portfolio chatbot (this project): a completed Spring Boot and LangChain4j application that answers questions about Israelin using `about-me.md`; it can use full portfolio context or optional RAG retrieval.
 
 ## Creative talents
 
@@ -109,7 +130,9 @@ Israelin draws, paints, crafts recipes, cooks, bakes, does art and craft project
 
 ## Personality and working style
 
-Creative thinker, rapid learner, adaptable, takes end-to-end ownership, collaborates across functions, gathers client requirements, shares knowledge and enjoys experimenting with proofs of concept.
+- Creative thinker, rapid learner, adaptable, takes end-to-end ownership, collaborates across cross-functional teams, gathers client requirements, and continuous learning.
+- Enjoys experimenting with proofs of concept.
+- Value open knowledge sharing, mutual learning, and equal respect for everyone's ideas.
 
 ## Portfolio website
 

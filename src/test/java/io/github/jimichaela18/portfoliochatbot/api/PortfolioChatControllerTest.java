@@ -119,14 +119,14 @@ class PortfolioChatControllerTest {
     @Test
     void acceptsQuestionsWithUnicodeCharacters() throws Exception {
         String question = "¿Cuál es tu nombre?";
-        when(chatService.answerQuestion(question)).thenReturn("Mi nombre es Chatbot.");
+        when(chatService.answerQuestion(question)).thenReturn("Mi nombre es TOB.");
 
         mockMvc.perform(post("/ask")
                         .with(remoteAddr("192.0.2.9"))
                         .contentType(MediaType.APPLICATION_JSON)
                         .content("{\"question\":\"" + question + "\"}"))
                 .andExpect(status().isOk())
-                .andExpect(jsonPath("$.answer").value("Mi nombre es Chatbot."));
+                .andExpect(jsonPath("$.answer").value("Mi nombre es TOB."));
 
         verify(chatService).answerQuestion(question);
     }
