@@ -149,6 +149,24 @@ class PortfolioChatServiceTest {
         assertSame(providerFailure, exception.getCause());
     }
 
+    @Test
+    void usesThirdPersonWhenAnsweringAboutIsraelin() {
+        stubModelResponse();
+
+        service.answerQuestion("What is her experience?");
+
+        SystemMessage systemMessage = assertInstanceOf(
+                SystemMessage.class,
+                capturedMessages()[0]
+        );
+        assertTrue(systemMessage.text().contains(
+                "Always refer to Israelin Michaela Joseph in the third person using \"Israelin\" or \"she/her\"."
+        ));
+        assertTrue(systemMessage.text().contains(
+                "Never speak as Israelin or use first-person pronouns"
+        ));
+    }
+
     private ChatMessage[] capturedMessages() {
         ArgumentCaptor<ChatMessage[]> messagesCaptor = ArgumentCaptor.forClass(ChatMessage[].class);
         verify(chatModel).chat(messagesCaptor.capture());
