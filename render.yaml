@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: portfolio-chatbot
+    runtime: docker
+    healthCheckPath: /health
+    envVars:
+      - key: SPRING_PROFILES_ACTIVE
+        value: production
+      - key: GQ_LLM_API_KEY
+        sync: false
+
