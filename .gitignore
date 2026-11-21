@@ -48,5 +48,5 @@ build/
 application-local.properties
 application-local.yml
 
-my-info.md
-PROJECT_GUIDELINES.md
+docs/
+.github/
