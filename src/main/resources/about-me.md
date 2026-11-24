@@ -3,7 +3,7 @@
 
 ## Overview
 
-Israelin Michaela Joseph is a Java and Spring Boot backend engineer with 4.5 years of experience. She develops and enhances backend services, collaborates with cross-functional teams and stakeholders to analyze requirements and deliver business solutions, and is also a maker who draws, paints, cooks, bakes and gardens. She enjoys experimenting with new things.
+Israelin Michaela Joseph is a Java and Spring Boot backend engineer with 4.5 years of experience. She develops and maintains reliable backend software systems, collaborates with cross-functional teams and stakeholders to analyze requirements and deliver practical solutions for business needs, and is also a maker at heart. Her creative interests include drawing, painting, crafting recipes, cooking, baking, art and craft projects, and gardening. She sees technical and creative thinking as complementary skills and enjoys experimenting with new things.
 
 ## Professional Summary
 
@@ -28,9 +28,9 @@ Salary expectations are not listed here. For those, contact her by email.
 - GitHub: https://github.com/JIMichaela18
 - Resume: available as a download on the portfolio website.
 
-## Technical skills with work experience
+## Technical skills
 
-- Languages: Java 11, SQL, JavaScript, HTML, CSS
+- Languages: Java 11+, SQL, JavaScript, HTML, CSS
 - Frameworks and technologies: Spring Boot, Spring MVC, Spring Security, Spring Data JPA, Hibernate, Spring Batch, Spring Tiles, Java EE, Jakarta EE, Struts2, DWR, EHCache, Bootstrap, jQuery
 - Databases: MySQL, PostgreSQL, IBM DB2
 - Cloud and DevOps: AWS (S3, SES), Docker, Azure Repos, Azure DevOps
@@ -41,17 +41,22 @@ Salary expectations are not listed here. For those, contact her by email.
 - Methodologies and management: Agile, Waterfall, Jira
 - Architecture and design: Monolithic, Service-Oriented Architecture (SOA), Design Patterns
 
-## Technical skills without work experience, learning through hands-on projects
-- Languages: Java 21 - 27
-- Architecture: Event-Driven Architecture, Microservices
-- Distributed systems: Kafka, RAG-based chatbot with LangChain4j
+## Currently Learning & Exploring
+
+Actively learning and exploring modern backend development technologies through self-learning and hands-on projects.
+
+- Programming: Java (21–27)
+- Software Architecture: Event-Driven Architecture and Microservices
+- Distributed Systems: Apache Kafka
+- AI-Integrated Application Development: Exploring AI integration into applications, building RAG-based chatbots using LangChain4j, and working with LLM-powered solutions.
+- Practical Learning: Applying these concepts through personal projects to gain hands-on experience and strengthen problem-solving skills.
 
 ## Work experience
 
 ### Career break: relocation (May 2023 to present)
 
 - Israelin has been on a career break since May 2023 because of a relocation. Relocated and currently upskilling in AI and modern backend technologies, with a focus on Java internals, distributed systems, event-driven architecture, microservices, and Kafka.
-- Learning through hands-on projects, including a RAG-based chatbot built with LangChain4j and a Java MCP server that enables AI clients to access my GitHub projects and provides a secure way to contact me.
+- Learning through hands-on projects, including a RAG-based chatbot built with LangChain4j and a Java MCP server that enables AI clients to access my GitHub projects and provides a secure way to contact me. The Java MCP server is planned as her next learning project.
 
 ### Software Engineer, Capestart (March 2022 to April 2023)
 
@@ -80,14 +85,16 @@ Project 1 (June 2019 to April 2020):
 
 ### Post Graduate
 - Master of Computer Applications (MCA), Mepco Schlenk Engineering College, 2017 to 2019.
-- 8.75 CGPA
 
 ### Under Graduate
 - Bachelor of Computer Applications (BCA), Fatima College, 2014 to 2017.
-- 7.9 CGPA
 
 ### Schooling
 Kanchi Sri Sankara Matriculation Higher Secondary School.
+
+#### CGPA
+MCA - 8.75 CGPA
+BCA - 7.9 CGPA
 
 ## Award
 
@@ -136,4 +143,15 @@ Israelin draws, paints, crafts recipes, cooks, bakes, does art and craft project
 
 ## Portfolio website
 
-The portfolio is a lightweight site with a Compile mode (technical) and a Create mode (creative), an interactive skills section, an experience timeline, sticky notes linking creative talents to engineering, pinned education and recognition cards, selected GitHub projects, a resume download and this chatbot.
+The portfolio is a lightweight, responsive personal portfolio with two interactive modes: Compile mode presents the technical, Java-backend side, while Create mode presents the creative side.
+
+It features:
+
+- A technical role introduction and career summary.
+- An interactive skills section.
+- An experience timeline covering three engineering roles: Software Engineer at Capestart, Full Stack Developer at NICSI/NIC, and Software Developer Intern at NIC.
+- An education and recognition section, with pinned-style education and award cards.
+- Creative tiles representing seven crafts: drawing, painting, crafting recipes, cooking, baking, art and craft projects, and gardening.
+- Selected GitHub projects, including portfolio-chatbot, digi-content, spring-boot-jpa-relationship-mappings, and jsp-servlet-crud-employee-details.
+- A downloadable resume and direct contact links.
+- TOB (The Online Buddy), an AI portfolio assistant that answers questions using Israelin's professional, technical, project, career-break and creative portfolio information.
