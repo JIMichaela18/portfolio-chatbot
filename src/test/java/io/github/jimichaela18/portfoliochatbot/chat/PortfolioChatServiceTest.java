@@ -10,6 +10,8 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.ArgumentCaptor;
 import org.springframework.core.io.Resource;
+import org.junit.jupiter.params.provider.MethodSource;
+import org.junit.jupiter.params.ParameterizedTest;
 
 import io.github.jimichaela18.portfoliochatbot.portfolio.FullContextPortfolioReferenceProvider;
 import io.github.jimichaela18.portfoliochatbot.portfolio.PortfolioContext;
@@ -17,6 +19,7 @@ import io.github.jimichaela18.portfoliochatbot.portfolio.PortfolioRagIndex;
 
 import java.io.ByteArrayInputStream;
 import java.nio.charset.StandardCharsets;
+import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertInstanceOf;
@@ -165,6 +168,40 @@ class PortfolioChatServiceTest {
         assertTrue(systemMessage.text().contains(
                 "Never speak as Israelin or use first-person pronouns"
         ));
+    }
+
+    @ParameterizedTest
+    @MethodSource("relevanceQuestions")
+    void appliesGeneralAnswerRelevanceRulesToEveryPortfolioTopic(String question) {
+        stubModelResponse();
+
+        assertEquals("mock answer", service.answerQuestion(question));
+
+        ChatMessage[] messages = capturedMessages();
+        SystemMessage systemMessage = assertInstanceOf(SystemMessage.class, messages[0]);
+        UserMessage userMessage = assertInstanceOf(UserMessage.class, messages[1]);
+
+        assertTrue(systemMessage.text().contains(
+                "Answer only the specific information directly requested by the user."
+        ));
+        assertTrue(systemMessage.text().contains(
+                "Do not volunteer supporting details such as grades, CGPA, dates, employers, awards, or projects unless the user asks for them."
+        ));
+        assertTrue(systemMessage.text().contains(
+                "Treat “list everything,” “complete details,” or “in full” as a request for comprehensive information on that topic."
+        ));
+        assertEquals(question, userMessage.singleText());
+    }
+
+    private static Stream<String> relevanceQuestions() {
+        return Stream.of(
+                "Tell me about her education.",
+                "What grades did she get?",
+                "When did she work at her previous employers?",
+                "What projects has she worked on?",
+                "What awards has she won?",
+                "Give me her full details."
+        );
     }
 
     private ChatMessage[] capturedMessages() {
